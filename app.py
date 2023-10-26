@@ -11,11 +11,13 @@ from flask_cors import CORS
 from eth_account._utils.signing import extract_chain_id, to_standard_v
 from eth_account._utils.legacy_transactions import serializable_unsigned_transaction_from_dict
 
+web3Provider = 'ENTER YOUR INFURA API KEY HERE'
+
 # Initializing endpoints to fetch blockchain data
-w3 = web3.Web3(web3.HTTPProvider('https://mainnet.infura.io/v3/83dde0f37a5b471aa94fb2b2ec9e4e9f'))
+w3 = web3.Web3(web3.HTTPProvider(web3Provider))
 ns = ENS.from_web3(w3)
 
-ETHERSCAN_API_KEY = 'JHPYXS788A67PHQA8G8Q5NVEGDEAQFQ9PS';
+ETHERSCAN_API_KEY = 'ENTER YOUR ETHERSCAN API KEY HERE';
 ETHERSCAN_ENDPOINT = 'https://api.etherscan.io/api';
 
 
